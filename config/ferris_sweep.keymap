@@ -34,8 +34,8 @@
     combos {
         compatible = "zmk,combos";
         combo_esc {
-            timeout-ms = <35>;
-            key-positions = <0 1 2>;
+            timeout-ms = <25>;
+            key-positions = <1 2>;
             bindings = <&kp ESC>;
         };
         combo_tab {
@@ -64,8 +64,8 @@
             bindings = <&kp LGUI>;
         };
         combo_bspc {
-            timeout-ms = <35>;
-            key-positions = <7 8 9>;
+            timeout-ms = <25>;
+            key-positions = <7 8>;
             bindings = <&kp BSPC>;
         };
         combo_enter {
@@ -79,17 +79,17 @@
             bindings = <&kp FI_MINUS>;
         };
         combo_lshift {
-            timeout-ms = <35>;
+            timeout-ms = <25>;
             key-positions = <10 11>;
             bindings = <&kp LSHFT>;
         };
         combo_lctrl {
-            timeout-ms = <35>;
+            timeout-ms = <25>;
             key-positions = <11 12>;
             bindings = <&kp LCTRL>;
         };
         combo_lalt {
-            timeout-ms = <35>;
+            timeout-ms = <25>;
             key-positions = <12 13>;
             bindings = <&kp LALT>;
         };
@@ -99,17 +99,17 @@
             bindings = <&kp LCTRL>, <&kp LALT>;
         };
         combo_rshift {
-            timeout-ms = <35>;
+            timeout-ms = <25>;
             key-positions = <18 19>;
             bindings = <&kp RSHFT>;
         };
         combo_rctrl {
-            timeout-ms = <35>;
+            timeout-ms = <25>;
             key-positions = <17 18>;
             bindings = <&kp RCTRL>;
         };
         combo_ralt {
-            timeout-ms = <35>;
+            timeout-ms = <25>;
             key-positions = <16 17>;
             bindings = <&kp RALT>;
         };
