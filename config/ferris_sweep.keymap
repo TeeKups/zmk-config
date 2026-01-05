@@ -17,7 +17,7 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <220>;
-            quick-tap-ms = <150>;
+            quick-tap-ms = <200>;
             require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
         };
@@ -34,29 +34,34 @@
     combos {
         compatible = "zmk,combos";
         combo_esc {
-            timeout-ms = <20>;
+            timeout-ms = <30>;
             key-positions = <1 2>;
             bindings = <&kp ESC>;
         };
         combo_tab {
-            timeout-ms = <20>;
+            timeout-ms = <30>;
             key-positions = <11 12>;
             bindings = <&kp TAB>;
         };
         combo_bspc {
-            timeout-ms = <20>;
+            timeout-ms = <30>;
             key-positions = <7 8>;
             bindings = <&kp BSPC>;
         };
         combo_enter {
-            timeout-ms = <20>;
+            timeout-ms = <30>;
             key-positions = <17 18>;
             bindings = <&kp ENTER>;
         };
         combo_dash {
-            timeout-ms = <20>;
+            timeout-ms = <30>;
             key-positions = <27 28>;
             bindings = <&kp FI_MINUS>;
+        };
+        combo_caps {
+            timeout-ms = <30>;
+            key-positions = <10 11 18 19>;
+            bindings = <&kp CAPS>;
         };
     };
 
@@ -115,14 +120,14 @@
         layer_three {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │          │          │          │          │   │  INS     │          │          │          │          │
-            &trans      &trans     &trans     &trans    &trans          &kp INS    &trans     &trans     &trans     &trans
+        //│          │          │          │          │          │   │  INS     │   HOME   │  PGDN    │  PGUP    │  END     │
+            &trans      &trans     &trans     &trans    &trans          &kp INS    &trans    &trans     &trans     &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │  DEL     │  LEFT       DOWN       UP      │ RIGHT    │
-            &trans     &trans     &trans     &trans     &trans          &kp DEL    HRMR(LEFT, DOWN,      UP,       RIGHT)
+        //│          │          │          │          │          │   │  LEFT    │  DOWN       UP         RIGHT   │          │
+            &trans     &trans     &trans     &trans     &trans          &kp LEFT   HRMR(DOWN, UP,        RIGHT,    &trans)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │          │  HOME    │  PGDOWN  │  PGUP    │  END     │
-            &trans     &trans     &trans     &trans     &trans          &trans     &kp HOME   &kp PG_DN  &kp PG_UP  &kp END
+        //│          │          │          │          │          │   │          │          │          │          │          │
+            &trans     &trans     &trans     &trans     &trans          &trans     &trans     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
