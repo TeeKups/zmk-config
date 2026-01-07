@@ -126,8 +126,8 @@
         //│          │          │          │          │          │   │  LEFT    │  DOWN       UP         RIGHT   │          │
             &trans     &trans     &trans     &trans     &trans          &kp LEFT   HRMR(DOWN, UP,        RIGHT,    &trans)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │          │          │          │          │          │
-            &trans     &trans     &trans     &trans     &trans          &trans     &trans     &trans     &trans     &trans
+        //│          │          │          │          │          │   │          │  DEL     │          │          │          │
+            &trans     &trans     &trans     &trans     &trans          &trans     &lp DEL   &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
