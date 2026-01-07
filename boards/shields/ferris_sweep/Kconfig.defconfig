@@ -19,6 +19,12 @@ config BT_MAX_CONN
 config BT_MAX_PAIRED
     default 5
 
+config CONFIG_ZMK_USB
+    default y
+
+config CONFIG_ZMK_USB_BOOT
+    default y
+
 endif
 
 
