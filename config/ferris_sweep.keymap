@@ -1,4 +1,4 @@
-// Copyright (c) 2022 The ZMK Contributors
+w// Copyright (c) 2022 The ZMK Contributors
 // SPDX-License-Identifier: MIT
 
 #include <behaviors.dtsi>
@@ -121,7 +121,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │          │          │          │          │   │  INS     │   HOME   │  PGDN    │  PGUP    │  END     │
-            &trans      &trans     &trans     &trans    &trans          &kp INS    &trans    &trans     &trans     &trans
+            &trans      &trans     &trans     &trans    &trans          &kp INS    &kp HOME  &kp PG_DN  &kp PG_DN  &kp END
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │  LEFT    │  DOWN       UP         RIGHT   │          │
             &trans     &trans     &trans     &trans     &trans          &kp LEFT   HRMR(DOWN, UP,        RIGHT,    &trans)
