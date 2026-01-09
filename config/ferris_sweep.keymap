@@ -104,7 +104,7 @@
             &trans        &trans        &trans        &trans        &trans            &kp FI_PIPE   HRMR(FI_LBKT, FI_RBKT,      FI_LT,        FI_GT)
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         //│             │             │             │             │             │   │  `          │  $          │  ^          │  ~          │  €          │
-            &trans        &trans        &trans        &trans        &trans            &ah FI_GRAVE  &kp DOLLAR    &ah CARET     &ah TILDE     &kp FI_EURO
+            &trans        &trans        &trans        &trans        &trans            &ah FI_GRAVE  &kp FI_DOLLAR &ah FI_CARET  &ah FI_TILDE  &kp FI_EURO
         //╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                       &trans        &trans            &trans        &trans
         //                                          ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
