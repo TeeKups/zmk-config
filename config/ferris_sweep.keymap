@@ -128,7 +128,7 @@
             &trans        &trans        &trans        &trans        &trans            &kp HOME      &kp PG_DN     &kp PG_UP     &kp END       &kp INS
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         //│             │             │             │             │             │   │  LEFT       │  DOWN       │   UP        │  RIGHT      │             │
-            &trans        &trans        &trans        &trans        &trans            &kp LEFT      HRMR(DOWN,     UP,          RIGHT,        &trans)
+            &trans        &trans        &trans        &trans        &trans            &kp LEFT      HRMR(DOWN,     UP,          RIGHT,        RSHFT)
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         //│             │             │             │             │             │   │             │  DEL        │             │             │             │
             &trans        &trans        &trans        &trans        &trans            &trans        &kp DEL      &trans        &trans        &trans
