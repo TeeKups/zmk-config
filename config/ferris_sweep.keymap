@@ -77,7 +77,7 @@
             &trans        &trans        &trans        &trans        &trans            &kp FI_UNDER  &kp FI_EQUAL  &kp FI_SLASH  &kp FI_BSLH   &kp HASH
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         //│             │             │             │             │             │   │  &          │  (          │  )          │  {          │  }          │
-            &kp LSHFT     &kp LCTRL     &kp LALT      &kp LGUI      &kp CAPS          &kp FI_AMP    HRMR(FI_LPAR, FI_RPAR,      FI_LBRC,      FI_RBRC)
+            &kp LSHFT     &kp LCTRL     &kp LALT      &kp LGUI      &kp CAPS          &kp FI_AMPS   HRMR(FI_LPAR, FI_RPAR,      FI_LBRC,      FI_RBRC)
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         //│             │             │             │             │             │   │  '          │  "          │  *          │  -          │  >          │
             &mo 5         &mo 4         &mo 3         &mo 2         &trans            &kp FI_SQT   &kp FI_DQT     &kp FI_STAR   &kp FI_MINUS   &kp FI_GT
