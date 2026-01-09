@@ -57,7 +57,7 @@
         ah: accent_hack {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_param_1to1>, <macro_tap &kp MACRO_PLACEHOLDER &kp FI_SPACE>;
+            bindings = <&macro_param_1to1>, <&kp MACRO_PLACEHOLDER &kp FI_SPACE>;
         };
     };
     keymap {
@@ -81,7 +81,7 @@
             bindings = <
         //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
         //│             │             │             │             │             │   │  _          │  =          │  /          │  \          │  #          │
-            &trans        &trans        &trans        &trans        &trans            &kp FI_UNDER  &kp FI_EQUAL  &kp FI_SLASH  &kp FI_BSLH   &kp HASH
+            &trans        &trans        &trans        &trans        &trans            &kp FI_UNDER  &kp FI_EQUAL  &kp FI_SLASH  &kp FI_BSLH   &kp FI_HASH
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         //│             │             │             │             │             │   │  &          │  (          │  )          │  {          │  }          │
             &kp LSHFT     &kp LCTRL     &kp LALT      &kp LGUI      &kp CAPS          &kp FI_AMPS   HRMR(FI_LPAR, FI_RPAR,      FI_LBRC,      FI_RBRC)
