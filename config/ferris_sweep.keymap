@@ -53,6 +53,13 @@
         };
     };
 
+    macros {
+        ah: accent_hack {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <macro_param_1to1>, <&kp MACRO_PLACEHOLDER &kp FI_SPACE>;
+        };
+    };
     keymap {
         compatible = "zmk,keymap";
         default_layer {
@@ -94,10 +101,10 @@
             &trans        &trans        &trans        &trans        &trans            &kp FI_EXCL   &kp FI_QMARK  &kp FI_AT     &kp FI_PRCNT   &trans
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         //│             │             │             │             │             │   │  |          │  [          │  ]          │  <          │  >          │
-            &trans        &trans        &trans        &trans        &trans            &kp FI_PIPE   HRMR(LBKT,    RBKT,          LT,           GT)
+            &trans        &trans        &trans        &trans        &trans            &kp FI_PIPE   HRMR(FI_LBKT, FI_RBKT,      FI_LT,        FI_GT)
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         //│             │             │             │             │             │   │  `          │  $          │  ^          │  ~          │  €          │
-            &trans        &trans        &trans        &trans        &trans            &kp GRAVE     &kp DOLLAR    &kp CARET     &kp TILDE     &kp FI_EURO
+            &trans        &trans        &trans        &trans        &trans            &ah FI_GRAVE  &kp DOLLAR    &ah CARET     &ah TILDE     &kp FI_EURO
         //╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                       &trans        &trans            &trans        &trans
         //                                          ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
