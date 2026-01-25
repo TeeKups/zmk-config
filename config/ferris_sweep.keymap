@@ -7,19 +7,23 @@
 #include <dt-bindings/zmk/outputs.h>
 #include "keys_fi.h"
 
-// Home row mods macro
-#define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LCTRL k2  &ht LALT k3  &ht LGUI k4
-#define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RALT k2  &ht RCTRL k3  &ht RSHFT k4
+// Home row mods
+#define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LCTRL k2  &ht LALT  k3  &ht LGUI  k4
+#define HRMR(k1,k2,k3,k4) &ht RGUI  k1  &ht RALT  k2  &ht RCTRL k3  &ht RSHFT k4
+
+&caps_word {
+    continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
+};
 
 / {
     behaviors {
         ht: hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <220>;
+            flavor = "balanced";
+            tapping-term-ms = <140>;
             quick-tap-ms = <200>;
-            require-prior-idle-ms = <100>;
+            require-prior-idle-ms = <200>;
             bindings = <&kp>, <&kp>;
         };
     };
@@ -27,29 +31,34 @@
     combos {
         compatible = "zmk,combos";
         combo_esc {
-            timeout-ms = <30>;
+            timeout-ms = <40>;
             key-positions = <1 2>;
             bindings = <&kp ESC>;
+            require-prior-idle-ms = <200>;
         };
         combo_tab {
-            timeout-ms = <30>;
+            timeout-ms = <40>;
             key-positions = <11 12>;
             bindings = <&kp TAB>;
+            require-prior-idle-ms = <200>;
         };
         combo_bspc {
-            timeout-ms = <30>;
+            timeout-ms = <40>;
             key-positions = <7 8>;
             bindings = <&kp BSPC>;
+            require-prior-idle-ms = <200>;
         };
         combo_enter {
-            timeout-ms = <30>;
+            timeout-ms = <40>;
             key-positions = <17 18>;
             bindings = <&kp ENTER>;
+            require-prior-idle-ms = <200>;
         };
-        combo_dash {
-            timeout-ms = <30>;
+        combo_del {
+            timeout-ms = <40>;
             key-positions = <27 28>;
-            bindings = <&kp FI_MINUS>;
+            bindings = <&kp DEL>;
+            require-prior-idle-ms = <200>;
         };
     };
 
@@ -67,95 +76,57 @@
         //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
             &kp FI_Q      &kp FI_W      &kp FI_E      &kp FI_R      &kp FI_T          &kp FI_Y      &kp FI_U      &kp FI_I      &kp FI_O      &kp FI_P
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        //│  A | SHIFT  │  S | CTRL   │  D | ALT    │  F | SUPER  │  G          │   │  H          │  J | SUPER  │  K | ALT    │  L | CTRL   │  Ä | SHIFT  │
             HRML(FI_A,    FI_S,         FI_D,         FI_F)         &kp FI_G          &kp FI_H      HRMR(FI_J,    FI_K,         FI_L,         FI_A_UMLAUT)
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-            &kp FI_Z      &kp FI_X      &kp FI_C      &kp FI_V      &kp FI_B          &kp FI_N      &kp FI_M      &kp FI_COMMA  &kp FI_DOT    &kp FI_O_UMLAUT
+            &kp FI_Z      &kp FI_X      &kp FI_C      &lt 3 FI_V    &kp FI_B          &kp FI_N      &kp FI_M      &kp FI_DOT    &kp FI_COMMA  &kp FI_O_UMLAUT
         //╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                      &none         &mo 1             &kp FI_SPACE  &none
+                                                      &mo 2         &mo 1             &kp FI_SPACE  &kp &caps_word
         //                                          ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
             >;
         };
 
-        layers_and_common_symbols {
+        symbols_layer {
             bindings = <
         //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-        //│             │             │             │             │             │   │  _          │  =          │  /          │  \          │  #          │
-            &trans        &trans        &trans        &trans        &trans            &kp FI_UNDER  &kp FI_EQUAL  &kp FI_SLASH  &kp FI_BSLH   &kp FI_HASH
+        //│  @          │  *          │  /          │  :          │  <          │   │  >          │  &          │  `          │  -          │  #          │
+            &kp FI_AT     &kp FI_STAR   &kp FI_SLASH  &kp FI_COLON  &kp FI_LT         &kp FI_GT     &kp FI_AMPS  &ah FI_GRAVE  &kp FI_MINUS   &kp FI_HASH
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        //│             │             │             │             │             │   │  &          │  (          │  )          │  {          │  }          │
-            &kp LSHFT     &kp LCTRL     &kp LALT      &kp LGUI      &kp CAPS          &kp FI_AMPS   HRMR(FI_LPAR, FI_RPAR,      FI_LBRC,      FI_RBRC)
+        //│  !          │  _          │  |          │  (          │  [          │   │  ]          │  )          │  "          │  =          │  ?          │
+            HRML(FI_EXCL, FI_UNDER,     FI_PIPE,      FI_LPAR)      &kp FI_LBKT       &kp FI_RBKT   HRMR(FI_RPAR, FI_DQT,      FI_EQUAL,      FI_QMARK)
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        //│             │             │             │             │             │   │  '          │  "          │  *          │  -          │  >          │
-            &mo 5         &mo 4         &mo 3         &mo 2         &trans            &kp FI_SQT   &kp FI_DQT     &kp FI_STAR   &kp FI_MINUS   &kp FI_GT
-        //╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                      &trans        &trans            &trans        &trans
-        //                                          ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
-            >;
-        };
-
-        more_symbols_layer {
-            bindings = <
-        //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-        //│             │             │             │             │             │   │  !          │  ?          │  @          │  %          │             │
-            &trans        &trans        &trans        &trans        &trans            &kp FI_EXCL   &kp FI_QMARK  &kp FI_AT     &kp FI_PRCNT   &trans
-        //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        //│             │             │             │             │             │   │  |          │  [          │  ]          │  <          │  >          │
-            &trans        &trans        &trans        &trans        &trans            &kp FI_PIPE   HRMR(FI_LBKT, FI_RBKT,      FI_LT,        FI_GT)
-        //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        //│             │             │             │             │             │   │  `          │  $          │  ^          │  ~          │  €          │
-            &trans        &trans        &trans        &trans        &trans            &ah FI_GRAVE  &kp FI_DOLLAR &ah FI_CARET  &ah FI_TILDE  &kp FI_EURO
+        //│  ^          │  $          │  \          │  ;          │  {          │   │  }          │ '           │  .          │  ,          │   %         │
+            &ah FI_CARET  &kp FI_DOLLAR &kp FI_BSLH   &lt 3 FI_SEMI &kp FI_LBRC       &kp FI_RBRC   &kp FI_SQT     &kp FI_DOT   &kp FI_COMMA  &kp FI_PERCENT
         //╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                       &trans        &trans            &trans        &trans
         //                                          ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
             >;
         };
 
-        numpad_layer {
+        numbers_layer {
             bindings = <
         //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-        //│             │             │             │             │             │   │  +          │  7          │  8          │  9          │  *          │
-            &trans        &trans        &trans        &trans        &trans            &kp FI_PLUS   &kp FI_N7     &kp FI_N8     &kp FI_N9     &kp FI_STAR
+        //│  @          │  *          │  /          │  :          │  <          │   │  >          │  &          │  +          │  -          │  #          │
+            &kp FI_AT     &kp FI_STAR   &kp FI_SLASH  &kp FI_COLON  &kp FI_LT         &kp FI_GT     &kp FI_AMPS   &kp FI_PLUS   &kp FI_MINUS  &kp FI_HASH
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        //│             │             │             │             │             │   │  -          │  4          │  5          │  6          │  /          │
-            &trans        &trans        &trans        &trans        &trans            &kp FI_MINUS  HRMR(FI_N4,   FI_N5,        FI_N6,         FI_SLASH)
+        //│  1          │  2          │  3          │  4          │  5          │   │  6          │  7          │  8          │  9          │   0         │
+            HRML(FI_N1,   FI_N2,        FI_N3,        FI_N4)        &kp FI_N5         &kp FI_N6     HRMR(FI_N7,   FI_N8,        FI_N9,        FI_N0)
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        //│             │             │             │             │             │   │  0          │  1          │  2          │  3          │  =          │
-            &trans        &trans        &trans        &trans        &trans            &kp FI_N0     &kp FI_N1     &kp FI_N2     &kp FI_N3     &kp FI_EQUAL
+        //│  ^          │  $          │  \          │  ;          │  {          │   │  }          │ '           │  .          │  ,          │   %         │
+            &ah FI_CARET  &kp FI_DOLLAR &kp FI_BSLH   &lt 3 FI_SEMI &kp FI_LBRC       &kp FI_RBRC   &kp FI_SQT     &kp FI_DOT   &kp FI_COMMA  &kp FI_PERCENT
         //╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                       &trans        &trans            &trans        &trans
         //                                          ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
             >;
         };
 
-        navigation_layer {
+        fn_and_navigation_layer {
             bindings = <
         //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-        //│             │             │             │             │             │   │  HOME       │  PG_DN      │  PGUP       │  END        │  INS        │
-            &trans        &trans        &trans        &trans        &trans            &kp HOME      &kp PG_DN     &kp PG_UP     &kp END       &kp INS
+            &kp F1        &kp F2        &kp F3        &kp F4        &kp INS           &kp HOME      &kp PG_DN     &kp PG_UP     &kp END       &none
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        //│             │             │             │             │             │   │  LEFT       │  DOWN       │   UP        │  RIGHT      │             │
-            &trans        &trans        &trans        &trans        &trans            &kp LEFT      HRMR(DOWN,     UP,          RIGHT,        RSHFT)
+            HRML(F5,      F6,           F7,           F8)           &none             &kp LEFT      HRMR(DOWN,     UP,          RIGHT,        RSHFT)
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        //│             │             │             │             │             │   │             │  DEL        │             │             │             │
-            &trans        &trans        &trans        &trans        &trans            &trans        &kp DEL      &trans        &trans        &trans
-        //╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                      &trans        &trans            &trans        &trans
-        //                                          ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
-            >;
-        };
-
-        fn_layer {
-            bindings = <
-        //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-        //│             │             │             │             │             │   │  VOL_UP     │  F1         │  F2         │  F3         │  F4         │
-            &trans        &trans        &trans        &trans        &out OUT_BLE      &kp C_VOL_UP  &kp F1        &kp F2        &kp F3        &kp F4
-        //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        //│             │             │             │             │             │   │  PAUSE      │  F5         │  F6         │  F7         │  F8         │
-            &trans        &trans        &trans        &trans        &out OUT_TOG      &kp C_PLAY_PAUSE  HRMR(F5,      F6,           F7,           F8)
-        //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        //│             │             │             │             │             │   │  VOL_DN     │  F9         │  F10        │  F11        │  F12        │
-            &trans        &trans        &trans        &trans        &out OUT_USB      &kp C_VOL_DN  &kp F9        &kp F10       &kp F11       &kp F12
+            &kp F9        &kp F10       &kp F11       &lt 3 F12     &none             &none         &kp C_VOL_DN  &kp C_PLAY_PAUSE &kp C_VOL_DN  &none
         //╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                       &trans        &trans            &trans        &trans
         //                                          ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
