@@ -21,7 +21,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <140>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             require-prior-idle-ms = <200>;
             bindings = <&kp>, <&kp>;
@@ -80,7 +80,7 @@
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
             &kp FI_Z      &kp FI_X      &kp FI_C      &lt 3 FI_V    &kp FI_B          &kp FI_N      &kp FI_M      &kp FI_DOT    &kp FI_COMMA  &kp FI_O_UMLAUT
         //╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                      &mo 2         &mo 1             &kp FI_SPACE  &kp &caps_word
+                                                      &mo 2         &mo 1             &kp FI_SPACE  &lt 3 &caps_word
         //                                          ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
             >;
         };
