@@ -88,8 +88,8 @@
         symbols_layer {
             bindings = <
         //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-        //│  @          │  +          │  `          │  <          │   *         │   │  &          │  &          │  /          │  -          │  #          │
-            &kp FI_AT     &kp FI_PLUS   &kp FI_GRAVE  &kp FI_LT     &kp FI_STAR       &kp FI_AMPS   &kp FI_GT    &ah FI_SLASH  &kp FI_MINUS   &kp FI_HASH
+        //│  @          │  +          │  `          │  <          │   *         │   │  &          │  >          │  /          │  -          │  #          │
+            &kp FI_AT     &kp FI_PLUS   &ah FI_GRAVE  &kp FI_LT     &kp FI_STAR       &kp FI_AMPS   &kp FI_GT    &kp FI_SLASH  &kp FI_MINUS   &kp FI_HASH
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         //│  !          │  _          │  $          │  [          │  (          │   │  ]          │  )          │  =          │  "          │  ?          │
             HRML(FI_EXCL, FI_UNDER,     FI_DOLLAR,    FI_LBKT)      &kp FI_LPAR       &kp FI_RPAR   HRMR(FI_RBKT, FI_EQUAL,     FI_DQT,       FI_QMARK)
@@ -105,8 +105,8 @@
         numbers_layer {
             bindings = <
         //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-        //│  @          │  +          │  `          │  <          │   *         │   │  &          │  &          │  /          │  -          │  #          │
-            &kp FI_AT     &kp FI_PLUS   &kp FI_GRAVE  &kp FI_LT     &kp FI_STAR       &kp FI_AMPS   &kp FI_GT    &ah FI_SLASH  &kp FI_MINUS   &kp FI_HASH
+        //│  @          │  +          │  `          │  <          │   *         │   │  &          │  >          │  /          │  -          │  #          │
+            &kp FI_AT     &kp FI_PLUS   &ah FI_GRAVE  &kp FI_LT     &kp FI_STAR       &kp FI_AMPS   &kp FI_GT    &kp FI_SLASH  &kp FI_MINUS   &kp FI_HASH
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         //│  1          │  2          │  3          │  4          │  5          │   │  6          │  7          │  8          │  9          │   0         │
             HRML(FI_N1,   FI_N2,        FI_N3,        FI_N4)        &kp FI_N5         &kp FI_N6     HRMR(FI_N7,   FI_N8,        FI_N9,        FI_N0)
