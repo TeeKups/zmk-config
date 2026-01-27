@@ -94,8 +94,8 @@
         //│  !          │  _          │  $          │  [          │  (          │   │  ]          │  )          │  =          │  "          │  ?          │
             HRML(FI_EXCL, FI_UNDER,     FI_DOLLAR,    FI_LBKT)      &kp FI_LPAR       &kp FI_RPAR   HRMR(FI_RBKT, FI_EQUAL,     FI_DQT,       FI_QMARK)
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        //│  ^          │  ~          │  \          │  |          │  {          │   │  }          │ '           │  .          │  ,          │   %         │
-            &ah FI_CARET  &ah FI_TILDE   &kp FI_BSLH  &lt 3 FI_PIPE &kp FI_LBRC       &kp FI_RBRC   &kp FI_SQT     &kp FI_DOT   &kp FI_COMMA  &kp FI_PERCENT
+        //│  ^          │  ~          │  \          │  {          │  |          │   │  '          │  }          │  .          │  ,          │   %         │
+            &ah FI_CARET  &ah FI_TILDE   &kp FI_BSLH  &lt 3 FI_LBRC &kp FI_PIPE       &kp FI_SQT    &kp FI_RBRC   &kp FI_DOT   &kp FI_COMMA  &kp FI_PERCENT
         //╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                       &trans        &trans            &trans        &trans
         //                                          ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
@@ -111,8 +111,8 @@
         //│  1          │  2          │  3          │  4          │  5          │   │  6          │  7          │  8          │  9          │   0         │
             HRML(FI_N1,   FI_N2,        FI_N3,        FI_N4)        &kp FI_N5         &kp FI_N6     HRMR(FI_N7,   FI_N8,        FI_N9,        FI_N0)
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        //│  ^          │  ~          │  \          │  |          │  {          │   │  }          │ '           │  .          │  ,          │   %         │
-            &ah FI_CARET  &ah FI_TILDE   &kp FI_BSLH  &lt 3 FI_PIPE &kp FI_LBRC       &kp FI_RBRC   &kp FI_SQT     &kp FI_DOT   &kp FI_COMMA  &kp FI_PERCENT
+        //│  ^          │  ~          │  \          │  {          │  |          │   │  '          │  }          │  .          │  ,          │   %         │
+            &ah FI_CARET  &ah FI_TILDE   &kp FI_BSLH  &lt 3 FI_LBRC &kp FI_PIPE       &kp FI_SQT    &kp FI_RBRC   &kp FI_DOT   &kp FI_COMMA  &kp FI_PERCENT
         //╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                       &trans        &trans            &trans        &trans
         //                                          ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
