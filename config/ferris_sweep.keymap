@@ -80,7 +80,7 @@
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
             &kp FI_Z      &kp FI_X      &kp FI_C      &lt 3 FI_V    &kp FI_B          &kp FI_N      &kp FI_M      &kp FI_DOT    &kp FI_COMMA  &kp FI_O_UMLAUT
         //╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                      &mo 2         &mo 1             &kp FI_SPACE  &lt 3 &caps_word
+                                                      &mo 2         &mo 1             &kp FI_SPACE  &lt 3 &CAPSLOCK
         //                                          ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
             >;
         };
@@ -88,14 +88,14 @@
         symbols_layer {
             bindings = <
         //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-        //│  @          │  *          │  /          │  :          │  <          │   │  >          │  &          │  `          │  -          │  #          │
-            &kp FI_AT     &kp FI_STAR   &kp FI_SLASH  &kp FI_COLON  &kp FI_LT         &kp FI_GT     &kp FI_AMPS  &ah FI_GRAVE  &kp FI_MINUS   &kp FI_HASH
+        //│  @          │  +          │  `          │  <          │   *         │   │  &          │  &          │  /          │  -          │  #          │
+            &kp FI_AT     &kp FI_PLUS   &kp FI_GRAVE  &kp FI_LT     &kp FI_STAR       &kp FI_AMPS   &kp FI_GT    &ah FI_SLASH  &kp FI_MINUS   &kp FI_HASH
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        //│  !          │  _          │  |          │  (          │  [          │   │  ]          │  )          │  "          │  =          │  ?          │
-            HRML(FI_EXCL, FI_UNDER,     FI_PIPE,      FI_LPAR)      &kp FI_LBKT       &kp FI_RBKT   HRMR(FI_RPAR, FI_DQT,      FI_EQUAL,      FI_QMARK)
+        //│  !          │  _          │  $          │  [          │  (          │   │  ]          │  )          │  =          │  "          │  ?          │
+            HRML(FI_EXCL, FI_UNDER,     FI_DOLLAR,    FI_LBKT)      &kp FI_LPAR       &kp FI_RPAR   HRMR(FI_RBKT, FI_EQUAL,     FI_DQT,       FI_QMARK)
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        //│  ^          │  $          │  \          │  ;          │  {          │   │  }          │ '           │  .          │  ,          │   %         │
-            &ah FI_CARET  &kp FI_DOLLAR &kp FI_BSLH   &lt 3 FI_SEMI &kp FI_LBRC       &kp FI_RBRC   &kp FI_SQT     &kp FI_DOT   &kp FI_COMMA  &kp FI_PERCENT
+        //│  ^          │  |          │  \          │             │  {          │   │  }          │ '           │  .          │  ,          │   %         │
+            &ah FI_CARET  &kp FI_PIPE   &kp FI_BSLH   &lt 3 FI_     &kp FI_LBRC       &kp FI_RBRC   &kp FI_SQT     &kp FI_DOT   &kp FI_COMMA  &kp FI_PERCENT
         //╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                       &trans        &trans            &trans        &trans
         //                                          ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
@@ -105,14 +105,14 @@
         numbers_layer {
             bindings = <
         //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-        //│  @          │  *          │  /          │  :          │  <          │   │  >          │  &          │  +          │  -          │  #          │
-            &kp FI_AT     &kp FI_STAR   &kp FI_SLASH  &kp FI_COLON  &kp FI_LT         &kp FI_GT     &kp FI_AMPS   &kp FI_PLUS   &kp FI_MINUS  &kp FI_HASH
+        //│  @          │  +          │  `          │  <          │   *         │   │  &          │  &          │  /          │  -          │  #          │
+            &kp FI_AT     &kp FI_PLUS   &kp FI_GRAVE  &kp FI_LT     &kp FI_STAR       &kp FI_AMPS   &kp FI_GT    &ah FI_SLASH  &kp FI_MINUS   &kp FI_HASH
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         //│  1          │  2          │  3          │  4          │  5          │   │  6          │  7          │  8          │  9          │   0         │
             HRML(FI_N1,   FI_N2,        FI_N3,        FI_N4)        &kp FI_N5         &kp FI_N6     HRMR(FI_N7,   FI_N8,        FI_N9,        FI_N0)
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        //│  ^          │  $          │  \          │  ;          │  {          │   │  }          │ '           │  .          │  ,          │   %         │
-            &ah FI_CARET  &kp FI_DOLLAR &kp FI_BSLH   &lt 3 FI_SEMI &kp FI_LBRC       &kp FI_RBRC   &kp FI_SQT     &kp FI_DOT   &kp FI_COMMA  &kp FI_PERCENT
+        //│  ^          │  |          │  \          │             │  {          │   │  }          │ '           │  .          │  ,          │   %         │
+            &ah FI_CARET  &kp FI_PIPE   &kp FI_BSLH   &lt 3 FI_     &kp FI_LBRC       &kp FI_RBRC   &kp FI_SQT     &kp FI_DOT   &kp FI_COMMA  &kp FI_PERCENT
         //╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                       &trans        &trans            &trans        &trans
         //                                          ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
