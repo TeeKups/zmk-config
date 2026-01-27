@@ -23,7 +23,7 @@
             flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
-            require-prior-idle-ms = <200>;
+            require-prior-idle-ms = <140>;
             bindings = <&kp>, <&kp>;
         };
     };
@@ -34,31 +34,31 @@
             timeout-ms = <40>;
             key-positions = <1 2>;
             bindings = <&kp ESC>;
-            require-prior-idle-ms = <200>;
+            require-prior-idle-ms = <140>;
         };
         combo_tab {
             timeout-ms = <40>;
             key-positions = <11 12>;
             bindings = <&kp TAB>;
-            require-prior-idle-ms = <200>;
+            require-prior-idle-ms = <140>;
         };
         combo_bspc {
             timeout-ms = <40>;
             key-positions = <7 8>;
             bindings = <&kp BSPC>;
-            require-prior-idle-ms = <200>;
+            require-prior-idle-ms = <140>;
         };
         combo_enter {
             timeout-ms = <40>;
             key-positions = <17 18>;
             bindings = <&kp ENTER>;
-            require-prior-idle-ms = <200>;
+            require-prior-idle-ms = <140>;
         };
         combo_del {
             timeout-ms = <40>;
             key-positions = <27 28>;
             bindings = <&kp DEL>;
-            require-prior-idle-ms = <200>;
+            require-prior-idle-ms = <140>;
         };
     };
 
