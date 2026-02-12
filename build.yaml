@@ -19,11 +19,13 @@
 #
 ---
 include:
-  - board: nice_nano
-    shield: ferris_sweep_dongle
-  - board: nice_nano
+#  - board: nice_nano
+#    shield: ferris_sweep_dongle
+  - board: puchi_ble
     shield: ferris_sweep_left
-  - board: nice_nano
+  - board: puchi_ble
     shield: ferris_sweep_right
-  - board: nice_nano
+  - board: puchi_ble
     shield: settings_reset
+#  - board: nice_nano
+#    shield: settings_reset
